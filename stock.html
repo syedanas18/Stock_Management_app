@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" id="nav-add-item"><i class="fas fa-plus-circle"></i> Add Item</a></li>
+                <li><a href="#" id="nav-stock"><i class="fas fa-boxes"></i> Current Stock</a></li>
+            </ul>
+        </nav>
+
+        <div id="home-section" class="section">
+            <h1>Welcome to Stock Management System</h1>
+            <p>Use the navigation bar to manage your stock.</p>
+        </div>
+
+        <div id="add-item-section" class="section" style="display:none;">
+            <h2>Add New Item</h2>
+            <form id="itemForm">
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" required>
+                <label for="itemQuantity">Quantity:</label>
+                <input type="number" id="itemQuantity" required>
+                <label for="itemPrice">Price:</label>
+                <input type="number" step="0.01" id="itemPrice" required>
+                <button type="submit" class="btn">Add Item</button>
+            </form>
+        </div>
+
+        <div id="stock-section" class="section" style="display:none;">
+            <h2>Current Stock</h2>
+            <table id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Stock items will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-section" style="display:none;">
+            <h2>Total Value: $<span id="totalValue">0.00</span></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
